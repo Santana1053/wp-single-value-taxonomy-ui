@@ -2,7 +2,7 @@
 /*
 Plugin Name: WP Single Value Taxonomy UI
 Description: This plugin adds the basic UI for single-valued taxonomies for heirarchical taxonomies. Updated version of abandonded plugin.
-Version: 1.0.2
+Version: 1.0.3
 Author URI: http://functionlabs.io
 */
 
@@ -71,7 +71,7 @@ class Walker_Taxonomy_Select extends Walker {
 	function end_lvl( &$output, $depth = 0, $arg = [] ) {}
 
 	function start_el( &$output, $term, $depth = 0, $args = [], $current_object_id = 0 ) {
-		$indent = str_repeat( "-", $depth ) . ' ';
+		$indent = str_repeat( "&dash;", $depth ) . ' ';
 
 		extract( $args );
 
