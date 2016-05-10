@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP Single Value Taxonomy UI
-Description: This plugin adds the basic UI for single-valued taxonomies for heirarchical taxonomies. Updated version of abandonded plugin
+Description: This plugin adds the basic UI for single-valued taxonomies for heirarchical taxonomies. Updated version of abandonded plugin.
 Version: 1.0
 Author URI: http://functionlabs.io
 */
@@ -57,7 +57,7 @@ class WP_Single_Value_Taxonomy_UI {
 		echo '</select>';
 	}
 }
-add_action('init', [ 'Single_Value_Taxonomy_UI', 'init' ] );
+add_action('init', [ 'WP_Single_Value_Taxonomy_UI', 'init' ] );
 
 class Walker_Taxonomy_Select extends Walker {
 	public $tree_type = 'taxonomy_select';
