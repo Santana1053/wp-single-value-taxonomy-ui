@@ -1,0 +1,10 @@
+{
+  "name": "functionlabs/wp-single-value-taxonomy-ui",
+  "type": "wordpress-plugin",
+  "description": "This plugin adds the basic UI for single-valued taxonomies for heirarchical taxonomies. Updated version of abandonded plugin.",
+  "keywords": [
+    "wordpress",
+    "taxonomy",
+    "term"
+  ]
+}
