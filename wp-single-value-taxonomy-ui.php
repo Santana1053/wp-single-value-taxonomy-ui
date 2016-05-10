@@ -2,7 +2,7 @@
 /*
 Plugin Name: WP Single Value Taxonomy UI
 Description: This plugin adds the basic UI for single-valued taxonomies for heirarchical taxonomies. Updated version of abandonded plugin.
-Version: 1.0.1
+Version: 1.0.2
 Author URI: http://functionlabs.io
 */
 
