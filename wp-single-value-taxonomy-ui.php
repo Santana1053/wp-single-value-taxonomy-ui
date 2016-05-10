@@ -71,7 +71,7 @@ class Walker_Taxonomy_Select extends Walker {
 	function end_lvl( &$output, $depth = 0, $arg = [] ) {}
 
 	function start_el( &$output, $term, $depth = 0, $args = [], $current_object_id = 0 ) {
-		$indent = str_repeat( "\t", $depth );
+		$indent = str_repeat( "-", $depth ) . ' ';
 
 		extract( $args );
 
