@@ -2,7 +2,7 @@
 /*
 Plugin Name: WP Single Value Taxonomy UI
 Description: This plugin adds the basic UI for single-valued taxonomies for heirarchical taxonomies. Updated version of abandonded plugin.
-Version: 1.0.4
+Version: 1.0.5
 Author URI: http://functionlabs.io
 */
 
@@ -74,10 +74,12 @@ class Walker_Taxonomy_Select extends Walker {
 
 		extract( $args );
 
+		$taxonomy_obj = get_taxonomy( $taxonomy );
+
 		$option = sprintf( '<option id="%s-%d" value="%s" %s%s />%s%s</option>',
 			esc_attr( $taxonomy ),
 			esc_attr( $term->term_id ),
-			esc_attr( $term->term_id ),
+			$taxonomy_obj->hierarchical ? esc_attr( $term->term_id ) : esc_attr( $term->slug ),
 			selected( in_array( $term->term_id, $selected_cats ), true, false ),
 			disabled( empty( $args['disabled'] ), false, false ),
 			$indent,
