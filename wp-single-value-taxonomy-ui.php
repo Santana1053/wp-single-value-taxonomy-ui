@@ -76,7 +76,7 @@ class Walker_Taxonomy_Select extends Walker {
 
 		$taxonomy_obj = get_taxonomy( $taxonomy );
 
-		$option = sprintf( '<option id="%s-%d" value="%s" %s%s />%s%s</option>',
+		$option = sprintf( '<option id="%s-%d" value="%s"%s%s>%s%s</option>',
 			esc_attr( $taxonomy ),
 			esc_attr( $term->term_id ),
 			$taxonomy_obj->hierarchical ? esc_attr( $term->term_id ) : esc_attr( $term->slug ),
