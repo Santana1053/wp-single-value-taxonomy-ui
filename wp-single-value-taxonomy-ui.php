@@ -44,9 +44,9 @@ class WP_Single_Value_Taxonomy_UI {
 		$tax_name = $taxonomy;
 		$taxonomy = get_taxonomy( $taxonomy );
 		$disabled = !current_user_can($taxonomy->cap->assign_terms) ? 'disabled="disabled"' : '';
-		printf( '<select name="tax_input[%s]" %s>', esc_attr( $tax_name ), $disabled );
+		printf( '<select name="tax_input[%s][]" %s>', esc_attr( $tax_name ), $disabled );
 		if ( !isset($taxonomy->required) || !$taxonomy->required ){
-			printf( '<option value="">(%s)</option>', sprintf( __('no %s'), $taxonomy->labels->singular_name ) );
+			printf( '<option value="">(%s)</option>', sprintf( __('No %s'), $taxonomy->labels->singular_name ) );
 		}
 
 		wp_terms_checklist( $post->ID, [
